@@ -1,46 +1,48 @@
 buildscript {
     repositories {
         google()
-        mavenLocal()
         mavenCentral()
-        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:8.1.0' // or latest supported
     }
 }
 
 apply plugin: 'com.android.library'
 
-def safeExtGet(prop, fallback) {
-    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
-}
-
 android {
-    compileSdkVersion safeExtGet('compileSdkVersion', 23)
-    buildToolsVersion safeExtGet('buildToolsVersion', '27.0.3')
+    namespace "com.yourlib.sqlcipher" // <-- customize this to your actual package
+    compileSdkVersion 34
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion', 16)
-        targetSdkVersion safeExtGet('targetSdkVersion', 22)
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
+        consumerProguardFiles "consumer-rules.pro"
     }
+
     lintOptions {
         abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 
 repositories {
-    mavenCentral()
     google()
+    mavenCentral()
 }
 
 dependencies {
-    implementation 'com.facebook.react:react-native:+'
+    implementation("com.facebook.react:react-android")
 
+    // SQLCipher
     implementation 'net.zetetic:android-database-sqlcipher:4.5.2@aar'
     implementation "androidx.sqlite:sqlite:2.0.1"
-
 }
