@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'React'
   s.dependency 'React-Core'
-  s.dependency 'React-RCTBridge'
+  # s.dependency 'React-RCTBridge'
   s.dependency 'ReactCommon'
 
 #  s.library = 'sqlite3'
