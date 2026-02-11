@@ -43,6 +43,6 @@ dependencies {
     implementation("com.facebook.react:react-android")
 
     // SQLCipher
-    implementation 'net.zetetic:android-database-sqlcipher:4.6.1@aar'
+    implementation 'net.zetetic:sqlcipher-android:4.6.1@aar'
     implementation "androidx.sqlite:sqlite:2.0.1"
 }
