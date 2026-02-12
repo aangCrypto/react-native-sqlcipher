@@ -24,7 +24,7 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
-    lintOptions {
+    lint {
         abortOnError false
     }
 
@@ -44,5 +44,5 @@ dependencies {
 
     // SQLCipher
     implementation 'net.zetetic:sqlcipher-android:4.6.1@aar'
-    implementation "androidx.sqlite:sqlite:2.0.1"
+    implementation "androidx.sqlite:sqlite:2.2.0"
 }

@@ -375,7 +375,7 @@ public class SqlcipherPlugin extends ReactContextBaseJavaModule {
 
         File dbfile = openDbFile(dbname,assetFilePath,openFlags,false);
 
-        SQLiteDatabase mydb = SQLiteDatabase.openDatabase(dbfile.getAbsolutePath(), key, null, openFlags);
+        SQLiteDatabase mydb = SQLiteDatabase.openDatabase(dbfile.getAbsolutePath(), key, null, openFlags, null);
         if (cbc != null)
             cbc.success("Database opened");
 
