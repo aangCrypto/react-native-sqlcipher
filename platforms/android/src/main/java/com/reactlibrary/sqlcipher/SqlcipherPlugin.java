@@ -15,7 +15,7 @@ import android.annotation.SuppressLint;
 import android.database.Cursor;
 import net.zetetic.database.sqlcipher.SQLiteCursor;
 import net.zetetic.database.sqlcipher.SQLiteDatabase;
-import net.zetetic.database.sqlcipher.SQLiteException;
+import android.database.sqlite.SQLiteException;
 import net.zetetic.database.sqlcipher.SQLiteStatement;
 import android.content.Context;
 import android.util.Base64;
