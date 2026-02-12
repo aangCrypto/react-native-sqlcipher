@@ -13,7 +13,7 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 
-import net.sqlcipher.database.SQLiteDatabase;
+import net.zetetic.database.sqlcipher.SQLiteDatabase;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,7 +36,7 @@ public class SqlcipherPluginPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(
                                 ReactApplicationContext reactContext) {
-        SQLiteDatabase.loadLibs(reactContext);
+        System.loadLibrary("sqlcipher");
         List<NativeModule> modules = new ArrayList<>();
 
         modules.add(new SqlcipherPlugin(reactContext));

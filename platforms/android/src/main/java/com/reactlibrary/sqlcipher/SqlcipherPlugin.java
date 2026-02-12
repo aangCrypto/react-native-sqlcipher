@@ -13,10 +13,10 @@ import android.annotation.SuppressLint;
 //import android.database.sqlite.SQLiteException;
 //import android.database.sqlite.SQLiteStatement;
 import android.database.Cursor;
-import net.sqlcipher.database.SQLiteCursor;
-import net.sqlcipher.database.SQLiteDatabase;
-import net.sqlcipher.database.SQLiteException;
-import net.sqlcipher.database.SQLiteStatement;
+import net.zetetic.database.sqlcipher.SQLiteCursor;
+import net.zetetic.database.sqlcipher.SQLiteDatabase;
+import net.zetetic.database.sqlcipher.SQLiteException;
+import net.zetetic.database.sqlcipher.SQLiteStatement;
 import android.content.Context;
 import android.util.Base64;
 
